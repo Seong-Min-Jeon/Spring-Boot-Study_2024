@@ -11,6 +11,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ItemController {
     private final ItemRepository itemRepository;
+    private final HwRepository hwRepository;
 
     @GetMapping("/list")
     String list(Model model) {
@@ -19,6 +20,15 @@ public class ItemController {
 
         model.addAttribute("items", result);
         return "list.html";
+    }
+
+    @GetMapping("/list/hw")
+    String listHw(Model model) {
+        List<Hw> result = hwRepository.findAll();
+        System.out.println(result.get(0).toString());
+
+        model.addAttribute("items", result);
+        return "listHw.html";
     }
 
 }

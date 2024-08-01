@@ -1,5 +1,9 @@
-package com.seongmin.shop;
+package com.seongmin.shop.controller;
 
+import com.seongmin.shop.Hw;
+import com.seongmin.shop.HwRepository;
+import com.seongmin.shop.Item;
+import com.seongmin.shop.ItemRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

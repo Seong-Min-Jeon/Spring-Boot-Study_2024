@@ -1,11 +1,9 @@
-package com.seongmin.shop;
+package com.seongmin.shop.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.sql.Timestamp;
-import java.text.SimpleDateFormat;
 import java.time.ZonedDateTime;
 
 @Controller

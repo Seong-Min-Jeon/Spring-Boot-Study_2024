@@ -1,16 +1,19 @@
 package com.seongmin.shop;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
-import java.sql.Date;
+import java.util.Date;
 
 @Entity
 @Data
+@SequenceGenerator(name = "hw_seq", sequenceName = "hw_seq", initialValue = 1, allocationSize = 1)
+// DROP SEQUENCE hw_seq으로 시퀀스 정보 초기화
 public class Hw {
     @Id
-    private Integer id;
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "hw_seq")
+    private Long id;
+
     private String title;
     private Date writtenDate;
 

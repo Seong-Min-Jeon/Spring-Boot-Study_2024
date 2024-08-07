@@ -7,11 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>상품 목록 리스트</title>
 
-    <link href=”/main.css” rel=”stylesheet”>
+    <link href="/css/styles.css" rel="stylesheet">
+    <script src="/js/listHw.js"></script>
 </head>
 <body>
+    <div th:replace="~{nav.html :: navbar}"></div>
+
     <div class="card" th:each="i : ${items}">
-        <img src="https://placehold.co/300">
+        <img class="clickImage" src="https://placehold.co/300" th:attr="data-id=${i.getId()}">
         <div>
             <h4 th:text="${i.getId()}">id</h4>
             <p th:text="${i.getTitle()}">title</p>
